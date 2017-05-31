@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="../css/yinghua.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="../js/yinghua.js"></script>
+<body >
+<div class="cherry">
+<img src="../image/yinghua.png" alt="" >
+</div>
+<script>
+    $(function(){
+        $('.cherry').Cherry_Blossoms({
+            is_Cherry:true,//是否生成樱花
+            image_min:10,//花瓣最小宽度和高度
+            image_max:50,//花瓣最大宽度和高度
+            time_min:10000,//花瓣最快下坠时间
+            time_max:20000,//花瓣最慢下坠时间
+            interval:100//花瓣生成时间间隔
+        })
+    })
+</script>
+</body>
