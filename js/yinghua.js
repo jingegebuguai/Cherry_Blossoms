@@ -46,13 +46,13 @@ $(function() {
                     console.log(time);
                     image_daxiao = randomNum(par.image_min, par.image_max);
                     console.log(image_daxiao);
-                    $('img:last-child').after('<img src="../image/yinghua.png" alt="">');
-                    $('img:last-child').css({
+                    $('#yinghua:last-child').after('<img id="yinghua" src="../image/yinghua.png" alt="">');
+                    $('#yinghua:last-child').css({
                         'margin-left': margin_left + '%',
                         'width': image_daxiao + 'px',
                         'height': image_daxiao + 'px'
                     });
-                    $('img').animate({
+                    $('#yinghua:last-child').animate({
                             left: -15 + '%',
                             top: 100 + '%',
                             deg: -540
@@ -60,12 +60,12 @@ $(function() {
                         {
                             step: function (deg) {
                                 //console.log(deg);
-                                $(this).css({"transform": "rotate3d(1,.5,0," + deg + "deg)"});
+                                $(this).css({"transform": "rotate3d(1,.2,0," + deg + "deg)"});
                             },
                             duration: time
                         }, time);
                     setTimeout(function () {
-                        $('img:first-child').remove();
+                        $('#yinghua:first-child').remove();
                     }, time-5000);
                 }, par.interval);
             }
